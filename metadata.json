@@ -1,0 +1,15 @@
+{
+  "name": "alisio-myPi",
+  "version": "0.1.0",
+  "author": "Antonio Alisio de Meneses Cordeiro",
+  "summary": "Modulo puppet para preparacao de um raspberryPi para meu uso",
+  "license": "Apache-2.0",
+  "source": "",
+  "project_page": "https://github.com/alisio/myPi",
+  "issues_url": "https://github.com/alisio/myPi",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ],
+  "data_provider": null
+}
+

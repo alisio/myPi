@@ -42,7 +42,20 @@
 #
 # Copyright 2018 Your name here, unless otherwise noted.
 #
-class myPi {
-
-
+class myPi (
+    $pacotes = ['docker.io','ssh','vim'],
+    $acesso_remoto = True,
+){  
+  package {$pacotes:
+  	  ensure 	=> 	'installed',
+  	  allow_virtual 	=> 	'yes',
+  }
+  if $acesso_remoto == True {
+    service { 'ssh':
+      ensure => running,
+      enable => true,
+      hasrestart => true,
+      hasstatus  => true,
+    }    
+  }
 }

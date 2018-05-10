@@ -56,6 +56,10 @@ class myPi (
       enable => true,
       hasrestart => true,
       hasstatus  => true,
-    }    
+    }
+  }
+  file_line { 'criando aliases' 
+    path => '/etc/bash.bashrc',
+    line => "alias='ls -l'",
   }
 }

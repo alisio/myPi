@@ -43,14 +43,14 @@
 # Copyright 2018 Your name here, unless otherwise noted.
 #
 class myPi (
-    $pacotes = ['docker.io','ssh','vim'],
-    $acesso_remoto = True,
+    $pacotes = ['docker.io','mlocate','ssh','vim'],
+    $acesso_remoto = 'True',
 ){  
   package {$pacotes:
   	  ensure 	=> 	'installed',
   	  allow_virtual 	=> 	'yes',
   }
-  if $acesso_remoto == True {
+  if $acesso_remoto == 'True' {
     service { 'ssh':
       ensure => running,
       enable => true,
@@ -58,8 +58,8 @@ class myPi (
       hasstatus  => true,
     }
   }
-  file_line { 'criando aliases' :
-    path => '/etc/bash.bashrc',
-    line => "alias='ls -l'",
-  }
+#  file_line { 'criando aliases' :
+#    path => '/etc/bash.bashrc',
+#    line => "alias='ls -l'",
+#  }
 }

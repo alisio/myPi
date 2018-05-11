@@ -1,9 +1,9 @@
 class samba (
-    $share  =   '',
-    $shareUsuario = '',
-    $shareSenha = '',
-    $shareIP = '',
-    $sharePontoDeMontagem = ''
+    $share  =   'pi',
+    $shareUsuario = 'pi',
+    $shareSenha = 'pi',
+    $shareIP = 'pi',
+    $sharePontoDeMontagem = '/mnt/pi'
     $shareUID = 1000
   ) {
     exec { $sharePontoDeMontagem:

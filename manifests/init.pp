@@ -43,9 +43,9 @@
 # Copyright 2018 Your name here, unless otherwise noted.
 #
 class myPi (
-    $pacotes = ['docker.io','mlocate','ssh','vim'],
+    $pacotes = ['docker.io','ngrep','mlocate','smbclient','ssh','vim'],
     $acesso_remoto = 'True',
-){  
+){
   package {$pacotes:
   	  ensure 	=> 	'installed',
   	  allow_virtual 	=> 	'yes',
